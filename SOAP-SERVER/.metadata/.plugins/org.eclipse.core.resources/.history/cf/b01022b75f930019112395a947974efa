@@ -1,0 +1,24 @@
+package models;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement
+@XmlAccessorType(XmlAccessType.FIELD) // Para serializar todos os campos por padrão
+public class Produto {
+
+	private String nome;
+
+	public Produto(String nome) {
+		super();
+		this.nome = nome;
+	}
+	
+	
+	public Produto() {
+		super();
+	}
+
+	
+}

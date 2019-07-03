@@ -1,0 +1,14 @@
+package controllers;
+
+import javax.jws.WebMethod;
+import javax.jws.WebService;
+
+@WebService
+public class ProdutoController {
+
+	@WebMethod
+	public String getProduto() {
+		return "dados";
+	}
+
+}

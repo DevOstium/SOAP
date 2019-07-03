@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+D:\DEV\BackEnd\Exemplos\SOAP\SOAP-SERVER\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2380598551.index
+3351352459.index
+3854252519.index
+1029085967.index
+2014183754.index
+685879156.index
