@@ -1,4 +1,4 @@
-!SESSION 2019-06-20 07:26:33.594 -----------------------------------------------
+!SESSION 2019-10-27 16:37:35.361 -----------------------------------------------
 eclipse.buildId=4.0.2.201811300843-RELEASE
 java.version=1.8.0_211
 java.vendor=Oracle Corporation
@@ -6,15 +6,15 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
 Framework arguments:  -product org.springframework.boot.ide.branding.sts4
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
 
-!ENTRY org.eclipse.jface 2 0 2019-06-20 07:27:24.590
+!ENTRY org.eclipse.jface 2 0 2019-10-27 16:37:49.845
 !MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2019-06-20 07:27:24.590
+!SUBENTRY 1 org.eclipse.jface 2 0 2019-10-27 16:37:49.845
 !MESSAGE A conflict occurred for CTRL+SHIFT+T:
 Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
 		Open a type in a Java editor,
 		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@29ba63f0,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@1e32037d,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
@@ -22,91 +22,80 @@ Binding(CTRL+SHIFT+T,
 	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
 		,
 		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@4822ab4d,
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@5059d398,
 		,,true),null),
 	org.eclipse.ui.defaultAcceleratorConfiguration,
 	org.eclipse.ui.contexts.window,,,system)
 
-!ENTRY org.eclipse.egit.ui 2 0 2019-06-20 07:27:39.895
+!ENTRY org.eclipse.egit.ui 2 0 2019-10-27 16:37:56.866
 !MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
 user global configuration and to define the default location to store repositories: 'C:\Users\fagne'. If this is
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
 
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2019-06-20 07:27:47.579
-!MESSAGE Server ‘org.jboss.tools’ failed with exception: Bad Gateway. ; version: 2.0.7.v20180504-0806
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2019-10-27 16:38:00.280
+!MESSAGE Server ‘org.jboss.tools’ failed with exception: redhat.ctrlflow.com. ; version: 2.0.7.v20180504-0806
 !STACK 0
-org.apache.http.client.HttpResponseException: Bad Gateway
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseHandler.handleResponse(HttpResponses.java:66)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseStringHandler.handleResponse(HttpResponses.java:88)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses$ProgressMonitorResponseStringHandler.handleResponse(HttpResponses.java:1)
-	at org.apache.http.client.fluent.Response.handleResponse(Response.java:90)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.HttpResponses.getContentWithProgress(HttpResponses.java:51)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:65)
+java.net.UnknownHostException: redhat.ctrlflow.com
+	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method)
+	at java.net.InetAddress$2.lookupAllHostAddr(Unknown Source)
+	at java.net.InetAddress.getAddressesFromNameService(Unknown Source)
+	at java.net.InetAddress.getAllByName0(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at java.net.InetAddress.getAllByName(Unknown Source)
+	at org.apache.http.impl.conn.SystemDefaultDnsResolver.resolve(SystemDefaultDnsResolver.java:45)
+	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:112)
+	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
+	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
+	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
+	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
+	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
+	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
+	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
+	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
+	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
+	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:170)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:64)
 	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
 	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
 	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
 	at java.lang.Thread.run(Unknown Source)
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:09.735
+!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2019-10-27 16:38:01.888
+!MESSAGE Server ‘org.eclipse.epp.logging.aeri.ide.server’ failed with exception: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $. ; version: 2.0.7.v20180504-0806
+!STACK 0
+com.google.gson.JsonSyntaxException: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:224)
+	at com.google.gson.Gson.fromJson(Gson.java:888)
+	at com.google.gson.Gson.fromJson(Gson.java:853)
+	at com.google.gson.Gson.fromJson(Gson.java:802)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.json.Json.deserialize(Json.java:91)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:66)
+	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
+	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
+	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.lang.IllegalStateException: Expected BEGIN_OBJECT but was STRING at line 1 column 1 path $
+	at com.google.gson.stream.JsonReader.beginObject(JsonReader.java:385)
+	at com.google.gson.internal.bind.ReflectiveTypeAdapterFactory$Adapter.read(ReflectiveTypeAdapterFactory.java:213)
+	... 9 more
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:02.162
 !MESSAGE Entering DelegatingStreamConnectionProvider()
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:09.741
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@6e68ccc9[org.springframework.tooling.boot.ls:1.1.1.201811300741(id=533)]
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:02.163
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2e17a9e6[org.springframework.tooling.boot.ls:1.1.1.201811300741(id=533)]
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:09.747
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:02.166
 !MESSAGE SpringBootLanguageServer exists!
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:10.057
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:02.204
 !MESSAGE Instantiating ReusableClasspathListenerHandler
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:15.299
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZxiwfCIc
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:15.304
-!MESSAGE subscribing to classpath changes: sts4.classpath.ZxiwfCIc
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:15.310
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:15.315
-!MESSAGE subsribers = [sts4.classpath.ZxiwfCIc]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:15.321
-!MESSAGE Sending initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.663
-!MESSAGE project SOAP-CLIENT ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.676
-!MESSAGE project RemoteSystemsTempFiles ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.684
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.691
-!MESSAGE project RemoteSystemsTempFiles SKIPPED
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.703
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.711
-!MESSAGE Sending initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.719
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZxiwfCIc => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.730
-!MESSAGE classpath=78 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.784
-!MESSAGE executing callback sts4.classpath.ZxiwfCIc SOAP-CLIENT false 78
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 07:31:17.922
-!MESSAGE executing callback sts4.classpath.ZxiwfCIc SUCCESS [done]
-
-!ENTRY org.eclipse.ui 4 0 2019-06-20 07:35:09.619
+!ENTRY org.eclipse.ui 4 0 2019-10-27 16:40:09.432
 !MESSAGE Unhandled event loop exception
 !STACK 0
 org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
@@ -175,6 +164,7 @@ org.eclipse.e4.core.di.InjectionException: java.lang.NullPointerException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:659)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:595)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1501)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1474)
 Caused by: java.lang.NullPointerException
 	at org.eclipse.tm4e.ui.internal.menus.ThemeContribution.getContributionItems(ThemeContribution.java:58)
 	at org.eclipse.ui.actions.CompoundContributionItem.getContributionItemsToFill(CompoundContributionItem.java:83)
@@ -189,1442 +179,66 @@ Caused by: java.lang.NullPointerException
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
 	at java.lang.reflect.Method.invoke(Unknown Source)
 	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:58)
-	... 64 more
+	... 65 more
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:13:56.592
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZxiwfCIc
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.707
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.bRDnVofr
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:13:56.600
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.ZxiwfCIc
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.708
+!MESSAGE subscribing to classpath changes: sts4.classpath.bRDnVofr
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:13:56.606
-!MESSAGE subsribers = null
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:13:56.610
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZxiwfCIc => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.755
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.MmAORJDZ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.765
-!MESSAGE subscribing to classpath changes: sts4.classpath.MmAORJDZ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.772
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.711
 !MESSAGE Setting up ClasspathListenerManager
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.777
-!MESSAGE subsribers = [sts4.classpath.MmAORJDZ]
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.713
+!MESSAGE subsribers = [sts4.classpath.bRDnVofr]
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.783
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.718
 !MESSAGE Sending initial event for all projects ...
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.789
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.722
 !MESSAGE project SOAP-CLIENT ...
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.796
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.801
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.724
 !MESSAGE project RemoteSystemsTempFiles ...
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.812
-!MESSAGE exists = true open = true => deleted = false
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.725
+!MESSAGE Preparing classpath changed notification SOAP-CLIENT
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.819
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.726
 !MESSAGE project RemoteSystemsTempFiles SKIPPED
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.832
-!MESSAGE classpath=78 entries
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.727
+!MESSAGE exists = true open = true => deleted = false
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.843
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.728
 !MESSAGE Sending initial event for all projects DONE
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.849
-!MESSAGE executing callback sts4.classpath.MmAORJDZ SOAP-CLIENT false 78
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.729
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.bRDnVofr => OK
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:34.855
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.MmAORJDZ => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:35.212
-!MESSAGE executing callback sts4.classpath.MmAORJDZ SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:48.372
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MmAORJDZ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:48.378
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.MmAORJDZ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:48.382
-!MESSAGE subsribers = null
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:22:48.386
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.MmAORJDZ => OK
-
-!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2019-06-20 08:25:16.421
-!MESSAGE Internal Error
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:765)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete 'D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT'.
-org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:142)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT.
-java.nio.file.FileSystemException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT: O arquivo já está sendo usado por outro processo.
-
-	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:223)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete 'D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT'.
-!SUBENTRY 1 org.eclipse.core.resources 4 273 2019-06-20 08:25:16.421
-!MESSAGE Problems encountered while deleting resources.
-!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-06-20 08:25:16.421
-!MESSAGE Could not delete 'D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT'.
-!STACK 1
-org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:142)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT.
-java.nio.file.FileSystemException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT: O arquivo já está sendo usado por outro processo.
-
-	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:223)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2019-06-20 08:25:16.421
-!MESSAGE Problems encountered while deleting files.
-!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2019-06-20 08:25:16.421
-!MESSAGE Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT.
-!STACK 0
-java.nio.file.FileSystemException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT: O arquivo já está sendo usado por outro processo.
-
-	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:223)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-06-20 08:25:16.421
-!MESSAGE Could not delete 'D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT'.
-
-!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2019-06-20 08:25:23.215
-!MESSAGE Internal Error
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:765)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete 'D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT'.
-org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:142)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT.
-java.nio.file.FileSystemException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT: O arquivo já está sendo usado por outro processo.
-
-	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:223)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete 'D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT'.
-!SUBENTRY 1 org.eclipse.core.resources 4 273 2019-06-20 08:25:23.215
-!MESSAGE Problems encountered while deleting resources.
-!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-06-20 08:25:23.215
-!MESSAGE Could not delete 'D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT'.
-!STACK 1
-org.eclipse.core.runtime.CoreException: Problems encountered while deleting files.
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:142)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT.
-java.nio.file.FileSystemException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT: O arquivo já está sendo usado por outro processo.
-
-	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:223)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-!SUBENTRY 3 org.eclipse.core.filesystem 4 273 2019-06-20 08:25:23.215
-!MESSAGE Problems encountered while deleting files.
-!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2019-06-20 08:25:23.215
-!MESSAGE Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT.
-!STACK 0
-java.nio.file.FileSystemException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT: O arquivo já está sendo usado por outro processo.
-
-	at sun.nio.fs.WindowsException.translateToIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsException.rethrowAsIOException(Unknown Source)
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:223)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteProject(ResourceTree.java:446)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteProject(ResourceTree.java:853)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1775)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.core.internal.resources.Project.delete(Project.java:322)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:158)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-06-20 08:25:23.215
-!MESSAGE Could not delete 'D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT'.
-
-!ENTRY org.eclipse.lsp4e 4 0 2019-06-20 08:26:07.592
-!MESSAGE java.util.concurrent.CancellationException
-!STACK 0
-java.util.concurrent.ExecutionException: java.util.concurrent.CancellationException
-	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
-	at java.util.concurrent.CompletableFuture.get(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.getServerCapabilities(LanguageServerWrapper.java:573)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.lambda$8(LanguageServiceAccessor.java:372)
-	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
-	at java.util.stream.ReferencePipeline$2$1.accept(Unknown Source)
-	at java.util.HashMap$KeySpliterator.forEachRemaining(Unknown Source)
-	at java.util.stream.AbstractPipeline.copyInto(Unknown Source)
-	at java.util.stream.AbstractPipeline.wrapAndCopyInto(Unknown Source)
-	at java.util.stream.ReduceOps$ReduceOp.evaluateSequential(Unknown Source)
-	at java.util.stream.AbstractPipeline.evaluate(Unknown Source)
-	at java.util.stream.ReferencePipeline.collect(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getMatchingStartedWrappers(LanguageServiceAccessor.java:374)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSWrappers(LanguageServiceAccessor.java:284)
-	at org.eclipse.lsp4e.LanguageServiceAccessor.getLSPDocumentInfosFor(LanguageServiceAccessor.java:444)
-	at org.eclipse.lsp4e.ConnectDocumentToLanguageServerSetupParticipant$1.run(ConnectDocumentToLanguageServerSetupParticipant.java:75)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.util.concurrent.CancellationException
-	at java.util.concurrent.CompletableFuture.cancel(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.stop(LanguageServerWrapper.java:332)
-	at org.eclipse.lsp4e.LanguageServerWrapper.disconnect(LanguageServerWrapper.java:488)
-	at org.eclipse.lsp4e.LanguageServerWrapper$1.bufferDisposed(LanguageServerWrapper.java:121)
-	at org.eclipse.core.internal.filebuffers.TextFileBufferManager$12.run(TextFileBufferManager.java:789)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.fireBufferDisposed(TextFileBufferManager.java:786)
-	at org.eclipse.core.internal.filebuffers.TextFileBufferManager.disconnect(TextFileBufferManager.java:206)
-	at org.eclipse.jdt.internal.ui.javaeditor.DocumentAdapter.close(DocumentAdapter.java:382)
-	at org.eclipse.jdt.internal.core.Openable.closeBuffer(Openable.java:94)
-	at org.eclipse.jdt.internal.core.Openable.closing(Openable.java:103)
-	at org.eclipse.jdt.internal.core.CompilationUnit.closing(CompilationUnit.java:255)
-	at org.eclipse.jdt.internal.core.JavaModelManager.removeInfoAndChildren(JavaModelManager.java:4281)
-	at org.eclipse.jdt.internal.core.JavaModelManager.discardPerWorkingCopyInfo(JavaModelManager.java:2039)
-	at org.eclipse.jdt.internal.core.DiscardWorkingCopyOperation.executeOperation(DiscardWorkingCopyOperation.java:38)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.runOperation(JavaModelOperation.java:802)
-	at org.eclipse.jdt.internal.core.CompilationUnit.discardWorkingCopy(CompilationUnit.java:513)
-	at org.eclipse.jdt.ui.wizards.NewTypeWizardPage.createType(NewTypeWizardPage.java:2274)
-	at org.eclipse.jdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:68)
-	at org.eclipse.jdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:123)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:108)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.527
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.wBoRbFZJ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.558
-!MESSAGE subscribing to classpath changes: sts4.classpath.wBoRbFZJ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.558
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.574
-!MESSAGE subsribers = [sts4.classpath.wBoRbFZJ]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.589
-!MESSAGE Sending initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.589
-!MESSAGE project SOAP-CLIENT ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.605
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.605
-!MESSAGE project RemoteSystemsTempFiles ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.636
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.636
-!MESSAGE project RemoteSystemsTempFiles SKIPPED
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.652
-!MESSAGE Sending initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.667
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.736
 !MESSAGE classpath=78 entries
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.667
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.wBoRbFZJ => OK
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:09.737
+!MESSAGE executing callback sts4.classpath.bRDnVofr SOAP-CLIENT false 78
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:15.683
-!MESSAGE executing callback sts4.classpath.wBoRbFZJ SOAP-CLIENT false 78
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-10-27 16:40:10.436
+!MESSAGE executing callback sts4.classpath.bRDnVofr SUCCESS [done]
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:16.168
-!MESSAGE executing callback sts4.classpath.wBoRbFZJ SUCCESS [done]
+!ENTRY org.eclipse.jdt.debug 2 0 2019-10-27 16:40:16.435
+!MESSAGE Unable to find location of java.lang.Thread.setName() in debuggee JVM, for type java.lang.Thread
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:32.518
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.wBoRbFZJ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:32.518
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.wBoRbFZJ
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:32.518
-!MESSAGE subsribers = null
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:32.534
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.wBoRbFZJ => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.320
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.rZAEKNuf
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.320
-!MESSAGE subscribing to classpath changes: sts4.classpath.rZAEKNuf
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.335
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.335
-!MESSAGE subsribers = [sts4.classpath.rZAEKNuf]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.351
-!MESSAGE Sending initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.398
-!MESSAGE project SOAP-CLIENT ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.445
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.445
-!MESSAGE project RemoteSystemsTempFiles ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.460
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.476
-!MESSAGE project RemoteSystemsTempFiles SKIPPED
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.476
-!MESSAGE classpath=78 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.476
-!MESSAGE Sending initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.492
-!MESSAGE executing callback sts4.classpath.rZAEKNuf SOAP-CLIENT false 78
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.492
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.rZAEKNuf => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.757
-!MESSAGE executing callback sts4.classpath.rZAEKNuf SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.804
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rZAEKNuf
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.804
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.rZAEKNuf
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.804
-!MESSAGE subsribers = null
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:35.820
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.rZAEKNuf => OK
-
-!ENTRY org.eclipse.lsp4e 4 0 2019-06-20 08:26:40.253
-!MESSAGE 
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1002 2019-10-27 17:29:53.951
+!MESSAGE Unable to read repository at http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=3644319.
 !STACK 0
-java.lang.InterruptedException
-	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
-	at java.util.concurrent.CompletableFuture.get(Unknown Source)
-	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:168)
-	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo(SpringBootJavaHoverProvider.java:35)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:173)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
-	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.284
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.cecZVaPr
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.284
-!MESSAGE subscribing to classpath changes: sts4.classpath.cecZVaPr
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.299
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.299
-!MESSAGE subsribers = [sts4.classpath.cecZVaPr]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.299
-!MESSAGE Sending initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.315
-!MESSAGE project SOAP-CLIENT ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.315
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.331
-!MESSAGE project RemoteSystemsTempFiles ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.346
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.346
-!MESSAGE project RemoteSystemsTempFiles SKIPPED
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.362
-!MESSAGE classpath=78 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.362
-!MESSAGE Sending initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.378
-!MESSAGE executing callback sts4.classpath.cecZVaPr SOAP-CLIENT false 78
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.378
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.cecZVaPr => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:40.752
-!MESSAGE executing callback sts4.classpath.cecZVaPr SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:44.845
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cecZVaPr
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:44.861
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.cecZVaPr
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:44.861
-!MESSAGE subsribers = null
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:26:44.861
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.cecZVaPr => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.052
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZSKPhqxx
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.067
-!MESSAGE subscribing to classpath changes: sts4.classpath.ZSKPhqxx
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.067
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.067
-!MESSAGE subsribers = [sts4.classpath.ZSKPhqxx]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.083
-!MESSAGE Sending initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.083
-!MESSAGE project SOAP-CLIENT ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.083
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.083
-!MESSAGE project RemoteSystemsTempFiles ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.099
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.099
-!MESSAGE project RemoteSystemsTempFiles SKIPPED
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.099
-!MESSAGE classpath=78 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.099
-!MESSAGE Sending initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.114
-!MESSAGE executing callback sts4.classpath.ZSKPhqxx SOAP-CLIENT false 78
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.114
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.ZSKPhqxx => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 08:28:32.177
-!MESSAGE executing callback sts4.classpath.ZSKPhqxx SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:23:23.331
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:23:23.340
-!MESSAGE exists = false open = true => deleted = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:23:23.347
-!MESSAGE executing callback sts4.classpath.ZSKPhqxx SOAP-CLIENT true 0
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:23:23.362
-!MESSAGE executing callback sts4.classpath.ZSKPhqxx SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:13.597
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:13.615
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:13.632
-!MESSAGE classpath=22 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:13.644
-!MESSAGE executing callback sts4.classpath.ZSKPhqxx SOAP-CLIENT false 22
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:13.678
-!MESSAGE executing callback sts4.classpath.ZSKPhqxx SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:15.070
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:15.078
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:15.086
-!MESSAGE classpath=78 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:15.090
-!MESSAGE executing callback sts4.classpath.ZSKPhqxx SOAP-CLIENT false 78
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 09:24:15.126
-!MESSAGE executing callback sts4.classpath.ZSKPhqxx SUCCESS [done]
-
-!ENTRY org.eclipse.ltk.ui.refactoring 4 10000 2019-06-20 09:24:29.425
-!MESSAGE Internal Error
-!STACK 1
-Java Model Exception: Core Exception [code 273] Problems encountered while deleting resources.
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:52)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete '/SOAP-CLIENT/br'.
-org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:813)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1771)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:166)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Problems encountered while deleting files.
-Contains: Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT\br.
-java.nio.file.DirectoryNotEmptyException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT\br
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
-	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
-	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:813)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1771)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:166)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Caused by: org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:765)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:166)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Could not delete '/SOAP-CLIENT/br'.
-org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:813)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1771)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:166)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Problems encountered while deleting files.
-Contains: Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT\br.
-java.nio.file.DirectoryNotEmptyException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT\br
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
-	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
-	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:813)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1771)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:166)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-!SUBENTRY 1 org.eclipse.core.resources 4 273 2019-06-20 09:24:29.430
-!MESSAGE Problems encountered while deleting resources.
-!SUBENTRY 2 org.eclipse.core.resources 4 273 2019-06-20 09:24:29.430
-!MESSAGE Could not delete '/SOAP-CLIENT/br'.
-!STACK 1
-org.eclipse.core.internal.resources.ResourceException: Problems encountered while deleting resources.
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:367)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:813)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1771)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:166)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-Contains: Problems encountered while deleting files.
-Contains: Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT\br.
-java.nio.file.DirectoryNotEmptyException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT\br
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
-	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
-	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:813)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1771)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:166)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-!SUBENTRY 3 org.eclipse.core.resources 4 273 2019-06-20 09:24:29.430
-!MESSAGE Problems encountered while deleting resources.
-!SUBENTRY 4 org.eclipse.core.filesystem 4 273 2019-06-20 09:24:29.430
-!MESSAGE Problems encountered while deleting files.
-!SUBENTRY 5 org.eclipse.core.filesystem 4 273 2019-06-20 09:24:29.430
-!MESSAGE Could not delete: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT\br.
-!STACK 0
-java.nio.file.DirectoryNotEmptyException: D:\DEV\BackEnd\Exemplos\SOAP\SOAP-CLIENT\SOAP-CLIENT\br
-	at sun.nio.fs.WindowsFileSystemProvider.implDelete(Unknown Source)
-	at sun.nio.fs.AbstractFileSystemProvider.deleteIfExists(Unknown Source)
-	at java.nio.file.Files.deleteIfExists(Unknown Source)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.internalDelete(LocalFile.java:256)
-	at org.eclipse.core.internal.filesystem.local.LocalFile.delete(LocalFile.java:140)
-	at org.eclipse.core.internal.localstore.DeleteVisitor.delete(DeleteVisitor.java:66)
-	at org.eclipse.core.internal.localstore.DeleteVisitor.visit(DeleteVisitor.java:154)
-	at org.eclipse.core.internal.localstore.UnifiedTree.accept(UnifiedTree.java:118)
-	at org.eclipse.core.internal.localstore.FileSystemResourceManager.delete(FileSystemResourceManager.java:364)
-	at org.eclipse.core.internal.resources.ResourceTree.internalDeleteFolder(ResourceTree.java:361)
-	at org.eclipse.core.internal.resources.ResourceTree.standardDeleteFolder(ResourceTree.java:813)
-	at org.eclipse.core.internal.resources.Resource.unprotectedDelete(Resource.java:1771)
-	at org.eclipse.core.internal.resources.Resource.delete(Resource.java:752)
-	at org.eclipse.ltk.core.refactoring.resource.DeleteResourceChange.perform(DeleteResourceChange.java:166)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.access$0(DynamicValidationStateChange.java:1)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange$1.run(DynamicValidationStateChange.java:108)
-	at org.eclipse.jdt.internal.core.BatchOperation.executeOperation(BatchOperation.java:41)
-	at org.eclipse.jdt.internal.core.JavaModelOperation.run(JavaModelOperation.java:736)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.core.JavaCore.run(JavaCore.java:5736)
-	at org.eclipse.jdt.internal.corext.refactoring.changes.DynamicValidationStateChange.perform(DynamicValidationStateChange.java:111)
-	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:283)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation$1.run(PerformChangeOperation.java:260)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.executeChange(PerformChangeOperation.java:308)
-	at org.eclipse.ltk.internal.ui.refactoring.UIPerformChangeOperation.executeChange(UIPerformChangeOperation.java:99)
-	at org.eclipse.ltk.core.refactoring.PerformChangeOperation.run(PerformChangeOperation.java:219)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.ltk.internal.ui.refactoring.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:89)
-	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:122)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 10:39:53.579
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZSKPhqxx
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 10:39:53.585
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.ZSKPhqxx
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 10:39:53.590
-!MESSAGE subsribers = null
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-06-20 10:39:53.595
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.ZSKPhqxx => OK
-!SESSION 2019-07-03 20:01:30.468 -----------------------------------------------
-eclipse.buildId=4.0.2.201811300843-RELEASE
-java.version=1.8.0_211
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pt_BR
-Framework arguments:  -product org.springframework.boot.ide.branding.sts4
-Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.springframework.boot.ide.branding.sts4
-
-!ENTRY org.eclipse.jface 2 0 2019-07-03 20:02:16.883
-!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
-!SUBENTRY 1 org.eclipse.jface 2 0 2019-07-03 20:02:16.883
-!MESSAGE A conflict occurred for CTRL+SHIFT+T:
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
-		Open a type in a Java editor,
-		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7b1559f1,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-Binding(CTRL+SHIFT+T,
-	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
-		,
-		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
-		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6b15e68c,
-		,,true),null),
-	org.eclipse.ui.defaultAcceleratorConfiguration,
-	org.eclipse.ui.contexts.window,,,system)
-
-!ENTRY org.eclipse.egit.ui 2 0 2019-07-03 20:02:24.673
-!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
-user global configuration and to define the default location to store repositories: 'C:\Users\fagne'. If this is
-not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
-EGit might behave differently since they see different configuration options.
-This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
-
-!ENTRY org.eclipse.osgi 2 0 2019-07-03 20:02:30.689
-!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer", thread "Thread[Worker-6: Update dynamic Java sources working sets,5,main]" timed out waiting (5003ms) for thread "Thread[Worker-2: Initializing Java Tooling,5,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.9.1.20180912-1601 [281]". To avoid deadlock, thread "Thread[Worker-6: Update dynamic Java sources working sets,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer" may not be fully initialized.
-!STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.9.1.20180912-1601"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=281] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:340)
-	at org.eclipse.osgi.container.Module.start(Module.java:404)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
-	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:180)
-	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
-	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
-	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
-	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3669)
-	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3645)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3192)
-	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3095)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3157)
-	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2128)
-	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3622)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3147)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3311)
-	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2388)
-	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
-	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2264)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	... 39 more
-Root exception:
-java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	at org.eclipse.osgi.container.Module.start(Module.java:404)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:612)
-	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:180)
-	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:934)
-	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:246)
-	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:63)
-	at org.eclipse.jdt.core.JavaCore.computeClasspathContainerInitializer(JavaCore.java:3669)
-	at org.eclipse.jdt.core.JavaCore.getClasspathContainerInitializer(JavaCore.java:3645)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3192)
-	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3095)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3157)
-	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2128)
-	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3622)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3147)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3311)
-	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2388)
-	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
-	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2264)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.epp.logging.aeri.ide 2 17 2019-07-03 20:02:33.633
-!MESSAGE Server ‘org.jboss.tools’ failed with exception: Connect to redhat.ctrlflow.com:443 [redhat.ctrlflow.com/138.201.81.7] failed: connect timed out. ; version: 2.0.7.v20180504-0806
-!STACK 0
-org.apache.http.conn.ConnectTimeoutException: Connect to redhat.ctrlflow.com:443 [redhat.ctrlflow.com/138.201.81.7] failed: connect timed out
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:151)
-	at org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect(PoolingHttpClientConnectionManager.java:373)
-	at org.apache.http.impl.execchain.MainClientExec.establishRoute(MainClientExec.java:381)
-	at org.apache.http.impl.execchain.MainClientExec.execute(MainClientExec.java:237)
-	at org.apache.http.impl.execchain.ProtocolExec.execute(ProtocolExec.java:185)
-	at org.apache.http.impl.execchain.RetryExec.execute(RetryExec.java:89)
-	at org.apache.http.impl.execchain.RedirectExec.execute(RedirectExec.java:111)
-	at org.apache.http.impl.client.InternalHttpClient.doExecute(InternalHttpClient.java:185)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:83)
-	at org.apache.http.impl.client.CloseableHttpClient.execute(CloseableHttpClient.java:56)
-	at org.apache.http.client.fluent.Request.internalExecute(Request.java:173)
-	at org.apache.http.client.fluent.Executor.execute(Executor.java:262)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.request(IO.java:170)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.IO.refreshConfiguration(IO.java:64)
-	at org.eclipse.epp.internal.logging.aeri.ide.server.mars.ServerConnection.startUp(ServerConnection.java:124)
-	at com.google.common.util.concurrent.AbstractIdleService$DelegateService$1.run(AbstractIdleService.java:62)
-	at com.google.common.util.concurrent.Callables$4.run(Callables.java:122)
-	at java.lang.Thread.run(Unknown Source)
-Caused by: java.net.SocketTimeoutException: connect timed out
-	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
-	at java.net.DualStackPlainSocketImpl.socketConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.doConnect(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connectToAddress(Unknown Source)
-	at java.net.AbstractPlainSocketImpl.connect(Unknown Source)
-	at java.net.PlainSocketImpl.connect(Unknown Source)
-	at java.net.SocksSocketImpl.connect(Unknown Source)
-	at java.net.Socket.connect(Unknown Source)
-	at org.apache.http.conn.ssl.SSLConnectionSocketFactory.connectSocket(SSLConnectionSocketFactory.java:339)
-	at org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect(DefaultHttpClientConnectionOperator.java:142)
-	... 17 more
-
-!ENTRY org.eclipse.osgi 2 0 2019-07-03 20:02:35.702
-!MESSAGE While loading class "org.eclipse.m2e.jdt.internal.MavenClasspathHelpers", thread "Thread[Worker-6: Update dynamic Java sources working sets,5,main]" timed out waiting (5001ms) for thread "Thread[Worker-2: Initializing Java Tooling,5,main]" to finish starting bundle "org.eclipse.m2e.jdt_1.9.1.20180912-1601 [281]". To avoid deadlock, thread "Thread[Worker-6: Update dynamic Java sources working sets,5,main]" is proceeding but "org.eclipse.m2e.jdt.internal.MavenClasspathHelpers" may not be fully initialized.
-!STACK 0
-org.osgi.framework.BundleException: Unable to acquire the state change lock for the module: osgi.identity; type="osgi.bundle"; version:Version="1.9.1.20180912-1601"; osgi.identity="org.eclipse.m2e.jdt"; singleton:="true" [id=281] STARTED [STARTED]
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:340)
-	at org.eclipse.osgi.container.Module.start(Module.java:404)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:44)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3211)
-	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3095)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3157)
-	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2128)
-	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3622)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3147)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3311)
-	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2388)
-	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
-	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2264)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-Caused by: java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	... 33 more
-Root exception:
-java.util.concurrent.TimeoutException: Timeout after waiting 5 seconds to acquire the lock.
-	at org.eclipse.osgi.container.Module.lockStateChange(Module.java:337)
-	at org.eclipse.osgi.container.Module.start(Module.java:404)
-	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:471)
-	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:117)
-	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:557)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:331)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:395)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:473)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:422)
-	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:414)
-	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:153)
-	at java.lang.ClassLoader.loadClass(Unknown Source)
-	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:44)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3211)
-	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3095)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2292)
-	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2319)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3157)
-	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2128)
-	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3622)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3147)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3311)
-	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2388)
-	at org.eclipse.jdt.internal.core.JavaProject.buildStructure(JavaProject.java:478)
-	at org.eclipse.jdt.internal.core.Openable.generateInfos(Openable.java:268)
-	at org.eclipse.jdt.internal.core.JavaElement.openWhenClosed(JavaElement.java:596)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:326)
-	at org.eclipse.jdt.internal.core.JavaElement.getElementInfo(JavaElement.java:312)
-	at org.eclipse.jdt.internal.core.JavaElement.getChildren(JavaElement.java:267)
-	at org.eclipse.jdt.internal.core.JavaProject.getPackageFragmentRoots(JavaProject.java:2264)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:201)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater.updateElements(DynamicSourcesWorkingSetUpdater.java:182)
-	at org.eclipse.jdt.internal.ui.workingsets.DynamicSourcesWorkingSetUpdater$1.run(DynamicSourcesWorkingSetUpdater.java:169)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.eclipse.core.resources 4 2 2019-07-03 20:02:39.004
-!MESSAGE Problems occurred when invoking code from plug-in: "org.eclipse.core.resources".
-!STACK 0
-java.lang.NullPointerException
-	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.getBuildPathManager(MavenClasspathContainerInitializer.java:80)
-	at org.eclipse.m2e.jdt.internal.MavenClasspathContainerInitializer.initialize(MavenClasspathContainerInitializer.java:46)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeContainer(JavaModelManager.java:3211)
-	at org.eclipse.jdt.internal.core.JavaModelManager$10.run(JavaModelManager.java:3095)
-	at org.eclipse.jdt.internal.core.JavaModelManager.initializeAllContainers(JavaModelManager.java:3155)
-	at org.eclipse.jdt.internal.core.JavaModelManager.getClasspathContainer(JavaModelManager.java:2128)
-	at org.eclipse.jdt.core.JavaCore.getClasspathContainer(JavaCore.java:3622)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3147)
-	at org.eclipse.jdt.internal.core.JavaProject.resolveClasspath(JavaProject.java:3311)
-	at org.eclipse.jdt.internal.core.JavaProject.getResolvedClasspath(JavaProject.java:2388)
-	at org.eclipse.jdt.internal.core.DeltaProcessor.createExternalArchiveDelta(DeltaProcessor.java:1002)
-	at org.eclipse.jdt.internal.core.DeltaProcessor.checkExternalArchiveChanges(DeltaProcessor.java:872)
-	at org.eclipse.jdt.internal.core.DeltaProcessor.resourceChanged(DeltaProcessor.java:2081)
-	at org.eclipse.jdt.internal.core.DeltaProcessingState.resourceChanged(DeltaProcessingState.java:477)
-	at org.eclipse.core.internal.events.NotificationManager$1.run(NotificationManager.java:300)
-	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.core.internal.events.NotificationManager.notify(NotificationManager.java:290)
-	at org.eclipse.core.internal.events.NotificationManager.handleEvent(NotificationManager.java:272)
-	at org.eclipse.core.internal.resources.Workspace.broadcastEvent(Workspace.java:374)
-	at org.eclipse.core.internal.resources.Resource.refreshLocal(Resource.java:1549)
-	at org.eclipse.rse.internal.files.ui.resources.SystemRemoteEditManager.refreshRemoteEditProject(SystemRemoteEditManager.java:796)
-	at org.eclipse.rse.internal.files.ui.Activator$InitRemoteEditJob.run(Activator.java:79)
-	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:02:55.802
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:02:55.827
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@305de39f[org.springframework.tooling.boot.ls:1.1.1.201811300741(id=533)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:02:55.832
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:02:56.220
-!MESSAGE Instantiating ReusableClasspathListenerHandler
-
-!ENTRY org.eclipse.lsp4e 4 0 2019-07-03 20:03:00.926
-!MESSAGE 
-!STACK 0
-java.lang.InterruptedException
-	at java.util.concurrent.CompletableFuture.reportGet(Unknown Source)
-	at java.util.concurrent.CompletableFuture.get(Unknown Source)
-	at org.eclipse.lsp4e.operations.hover.LSBasedHover.getHoverInfo(LSBasedHover.java:168)
-	at org.springframework.tooling.boot.ls.jdt.SpringBootJavaHoverProvider.getHoverInfo(SpringBootJavaHoverProvider.java:35)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:173)
-	at org.eclipse.jdt.internal.ui.text.java.hover.BestMatchHover.getHoverInfo2(BestMatchHover.java:133)
-	at org.eclipse.jdt.internal.ui.text.java.hover.JavaEditorTextHoverProxy.getHoverInfo2(JavaEditorTextHoverProxy.java:89)
-	at org.eclipse.jface.text.TextViewerHoverManager$4.run(TextViewerHoverManager.java:169)
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:00.948
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NEjvyCtg
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:00.950
-!MESSAGE subscribing to classpath changes: sts4.classpath.NEjvyCtg
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:00.952
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:00.977
-!MESSAGE subsribers = [sts4.classpath.NEjvyCtg]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:00.981
-!MESSAGE Sending initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:00.984
-!MESSAGE project SOAP-CLIENT ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:00.986
-!MESSAGE project RemoteSystemsTempFiles ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:00.993
-!MESSAGE Preparing classpath changed notification SOAP-CLIENT
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:01.022
-!MESSAGE project RemoteSystemsTempFiles SKIPPED
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:01.078
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:01.103
-!MESSAGE Sending initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:01.108
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.NEjvyCtg => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:01.113
-!MESSAGE classpath=78 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:01.114
-!MESSAGE executing callback sts4.classpath.NEjvyCtg SOAP-CLIENT false 78
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:01.579
-!MESSAGE executing callback sts4.classpath.NEjvyCtg SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:30.815
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NEjvyCtg
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:30.818
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.NEjvyCtg
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:30.820
-!MESSAGE subsribers = null
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2019-07-03 20:03:30.821
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.NEjvyCtg => OK
+java.io.IOException: http://marketplace.eclipse.org/marketplace-client-intro?mpc_install=3644319 is not a valid repository location.
+	at org.eclipse.equinox.internal.p2.metadata.repository.SimpleMetadataRepositoryFactory.load(SimpleMetadataRepositoryFactory.java:103)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.factoryLoad(MetadataRepositoryManager.java:63)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:770)
+	at org.eclipse.equinox.internal.p2.repository.helpers.AbstractRepositoryManager.loadRepository(AbstractRepositoryManager.java:671)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:110)
+	at org.eclipse.equinox.internal.p2.metadata.repository.MetadataRepositoryManager.loadRepository(MetadataRepositoryManager.java:105)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.getAvailableRepositories(UpdateChecker.java:152)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker.checkForUpdates(UpdateChecker.java:130)
+	at org.eclipse.equinox.internal.p2.updatechecker.UpdateChecker$UpdateCheckThread.run(UpdateChecker.java:78)

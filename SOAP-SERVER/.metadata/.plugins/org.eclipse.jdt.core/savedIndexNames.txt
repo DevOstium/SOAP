@@ -15,7 +15,6 @@ INDEX VERSION 1.131+D:\DEV\BackEnd\Exemplos\SOAP\SOAP-SERVER\.metadata\.plugins\
 4029164763.index
 1502919148.index
 312146980.index
-3854252519.index
 3898599632.index
 2341294296.index
 1289699494.index

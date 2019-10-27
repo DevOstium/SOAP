@@ -4,6 +4,8 @@ import javax.jws.WebMethod;
 import javax.jws.WebParam;
 import javax.jws.WebService;
 
+//Endereco : http://localhost:8080/SOAP-SERVER/ProdutoController?WSDL
+
 @WebService
 public class ProdutoController {
 
