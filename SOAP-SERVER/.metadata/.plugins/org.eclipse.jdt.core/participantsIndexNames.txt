@@ -1,5 +1,0 @@
-INDEX VERSION 1.131
-D:\DEV\BackEnd\Exemplos\SOAP\SOAP-SERVER\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\3482651925.index
-\SOAP\src\main\resources
-D:\DEV\BackEnd\Exemplos\SOAP\SOAP-SERVER\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2002199893.index
-\SOAP-SERVER\src\main\java

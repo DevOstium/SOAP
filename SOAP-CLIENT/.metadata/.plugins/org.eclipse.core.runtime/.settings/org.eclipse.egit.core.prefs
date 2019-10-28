@@ -1,4 +1,4 @@
-GitRepositoriesView.GitDirectories=D\:\\DEV\\BackEnd\\Exemplos\\SOAP\\.git;
-GitRepositoriesView.GitDirectories.relative=D\:\\DEV\\BackEnd\\Exemplos\\SOAP\\.git;
+GitRepositoriesView.GitDirectories=/home/softvaro/dev/SOA/Exemplos/SOAP/.git\:
+GitRepositoriesView.GitDirectories.relative=/home/softvaro/dev/SOA/Exemplos/SOAP/.git\:
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
